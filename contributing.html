@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-05-02 Tue 22:26 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contributing to this website.</title>
+<meta name="generator" content="Org mode" />
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">Contributing to this website.</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9186fe7">Introduction</a></li>
+<li><a href="#org80a1695">Prerequisites</a></li>
+<li><a href="#org6cbfb04">Contributing</a></li>
+<li><a href="#org8d19366">Licensing</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9186fe7" class="outline-2">
+<h2 id="org9186fe7">Introduction</h2>
+<div class="outline-text-2" id="text-org9186fe7">
+<p>
+This website uses <code>GNU Emacs</code> and <code>org-mode</code> to manage content.
+Org mode files (.org) are converted to HTML files (.html) by Emacs.
+It is surprisingly easy to contribute to this website.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80a1695" class="outline-2">
+<h2 id="org80a1695">Prerequisites</h2>
+<div class="outline-text-2" id="text-org80a1695">
+<ol class="org-ol">
+<li>Get a text editing environment with support for org mode.
+Options include the obvious GNU Emacs but also
+<code>VS Code</code> with <a href="https://marketplace.visualstudio.com/items?itemName=tootone.org-mode">an extension</a> or <code>Vim</code> by <a href="https://github.com/jceb/vim-orgmode">committing heresy</a>.</li>
+
+<li>Be familiar with <a href="content/git.html">Git</a>.</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-org6cbfb04" class="outline-2">
+<h2 id="org6cbfb04">Contributing</h2>
+<div class="outline-text-2" id="text-org6cbfb04">
+<ol class="org-ol">
+<li>Clone the <a href="https://github.com/lugatuic/new-new-website">GitHub repo</a>.</li>
+<li>In the <code>content/</code> folder, create a file with a sensible name (in a new branch).</li>
+<li><p>
+Add the following as a header of the file.
+</p>
+<div class="org-src-container">
+<pre class="src src-org">#+TITLE: <span style="font-weight: bold;">&lt;Page Title&gt;</span>
+#+DATE: &lt;YYYY-MM-DD&gt;
+#+AUTHOR: Your Full Name
+#+EMAIL: netid@uic.edu
+</pre>
+</div></li>
+<li>Write out your contribution article in normal <code>org-mode</code> syntax.</li>
+<li>Test changes locally by running <code>./build.sh</code>. The results are in the <code>public/</code> folder.</li>
+<li>Push and create a Pull Request!</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org8d19366" class="outline-2">
+<h2 id="org8d19366">Licensing</h2>
+<div class="outline-text-2" id="text-org8d19366">
+<p>
+By contributing, you agree to release your work under the same license as the entire project.
+This project is licensed <code>MIT</code> and may be changed by the LUG Administration with or without notice.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2023-01-02 Mon 00:00</p>
+<p class="date">Created: 2023-05-02 Tue 22:26</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.3)</p>
+</div>
+</body>
+</html>

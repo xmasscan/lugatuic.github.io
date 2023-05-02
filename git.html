@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-05-02 Tue 22:26 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Introduction to Git</title>
+<meta name="generator" content="Org mode" />
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">Introduction to Git</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge061271">Git Internals and SHA</a>
+<ul>
+<li><a href="#some-git-terms">Some Git Terms</a></li>
+<li><a href="#basic-git-workflow">Basic Git Workflow</a></li>
+<li><a href="#git-basics">Git Basics</a>
+<ul>
+<li><a href="#a-very-good-guide-to-git-basics">A very good guide to Git basics</a></li>
+<li><a href="#command-reference">Command Reference</a></li>
+</ul>
+</li>
+<li><a href="#how-does-git-work">How does Git work?</a>
+<ul>
+<li><a href="#git-objects">Git objects</a></li>
+<li><a href="#git-and-graphs">Git and Graphs</a></li>
+<li><a href="#sha1">SHA1</a></li>
+<li><a href="#content-is-king">Content is King</a></li>
+</ul>
+</li>
+<li><a href="#learn-more-about-git">Learn more about Git</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge061271" class="outline-2">
+<h2 id="orge061271">Git Internals and SHA</h2>
+<div class="outline-text-2" id="text-orge061271">
+</div>
+<div id="outline-container-org0ade348" class="outline-3">
+<h3 id="some-git-terms">Some Git Terms</h3>
+<div class="outline-text-3" id="text-some-git-terms">
+<ul class="org-ul">
+<li>Untracked files: New files that Git has not tracked.</li>
+<li>Working area: Modified files/changes that are un-committed.</li>
+<li>Staging area: Modified files/changes that are marked to go into the
+next commit.</li>
+<li>Local repo: Local copy of the repository</li>
+<li>Remote repo: Hosted repository on GitHub, GitLab, etc.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3279719" class="outline-3">
+<h3 id="basic-git-workflow">Basic Git Workflow</h3>
+<div class="outline-text-3" id="text-basic-git-workflow">
+
+<div class="figure">
+<p><img src="images/git-workflow.png" alt="git-workflow.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Git Workflow</p>
+</div>
+
+<p>
+Image source: <i><a href="https://backlog.com/git-tutorial/git-workflow/">https://backlog.com/git-tutorial/git-workflow/</a></i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70a8c1c" class="outline-3">
+<h3 id="git-basics">Git Basics</h3>
+<div class="outline-text-3" id="text-git-basics">
+<p>
+Here is a cool webapp to visualizing Git stuffs:
+<a href="http://git-school.github.io/visualizing-git/">http://git-school.github.io/visualizing-git/</a>
+</p>
+</div>
+
+<div id="outline-container-org293e84e" class="outline-4">
+<h4 id="a-very-good-guide-to-git-basics">A very good guide to Git basics</h4>
+<div class="outline-text-4" id="text-a-very-good-guide-to-git-basics">
+<p>
+<a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository">Pro
+Git - Chapter 2</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95fdbee" class="outline-4">
+<h4 id="command-reference">Command Reference</h4>
+<div class="outline-text-4" id="text-command-reference">
+<p>
+<a href="https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Getting-and-Creating-Projects">Pro
+Git - A3.2 Appendix C</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9bba8c1" class="outline-3">
+<h3 id="how-does-git-work">How does Git work?</h3>
+<div class="outline-text-3" id="text-how-does-git-work">
+<p>
+Inside Git, everything is an object.
+</p>
+</div>
+
+<div id="outline-container-org70f9910" class="outline-4">
+<h4 id="git-objects">Git objects</h4>
+<div class="outline-text-4" id="text-git-objects">
+<p>
+Everything in Git is represented in a few basic objects stored in the
+file system in the <code>.git</code> directory.
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="blob"></a>Blob<br />
+<div class="outline-text-5" id="text-blob">
+<ul class="org-ul">
+<li>Data (code, pictures, etc.)</li>
+</ul>
+</div>
+</li>
+
+<li><a id="tree"></a>Tree<br />
+<div class="outline-text-5" id="text-tree">
+<ul class="org-ul">
+<li>Pointers to files, content and other trees</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="images/git-tree.png" alt="git-tree.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Git Tree</p>
+</div>
+
+<p>
+Image source: <i><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">https://git-scm.com/book/en/v2/Git-Internals-Git-Objects</a></i>
+</p>
+</div>
+</li>
+
+<li><a id="commit"></a>Commit<br />
+<div class="outline-text-5" id="text-commit">
+<ul class="org-ul">
+<li>Author</li>
+<li>Message</li>
+<li>Pointer to a tree</li>
+<li>Pointer to parent</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="images/git-commit.png" alt="git-commit.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Git Commit</p>
+</div>
+
+<p>
+Image source: <i><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">https://git-scm.com/book/en/v2/Git-Internals-Git-Objects</a></i>
+</p>
+</div>
+</li>
+
+<li><a id="org56b37f3"></a>Ref (aka tag, branch, etc.)<br />
+<div class="outline-text-5" id="text-org56b37f3">
+<ul class="org-ul">
+<li>Pointer to a commit</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="images/git-ref.png" alt="git-ref.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>Git References</p>
+</div>
+
+<p>
+Image source:
+<i><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-References">https://git-scm.com/book/en/v2/Git-Internals-Git-References</a></i>
+</p>
+</div>
+</li>
+
+<li><a id="read-more"></a>Read more<br />
+<div class="outline-text-5" id="text-read-more">
+<ul class="org-ul">
+<li><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Pro Git -
+10.2 Git Internals - Git Objects</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-References">Pro
+Git - 10.3 Git Internals - Git References</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org2539dac" class="outline-4">
+<h4 id="git-and-graphs">Git and Graphs</h4>
+<div class="outline-text-4" id="text-git-and-graphs">
+<p>
+A Git repository is essentially a giant
+<a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">directed acyclic
+graph (DAG)</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdabbc84" class="outline-4">
+<h4 id="sha1">SHA1</h4>
+<div class="outline-text-4" id="text-sha1">
+<p>
+Every object is stored on disk and has a SHA-1 hash as the filename.
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="but-isnt-sha1-insecure"></a>But isn't SHA1 insecure?<br />
+<div class="outline-text-5" id="text-but-isnt-sha1-insecure">
+<p>
+Yes, but that does not matter in this context. Git uses SHA1 to keep
+track of data and check integrity. It is still a good hashing algorithm
+with a very-very low collision rate.
+</p>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org1f12605" class="outline-4">
+<h4 id="content-is-king">Content is King</h4>
+<div class="outline-text-4" id="text-content-is-king">
+<p>
+Git is very smart. It does not keep track of files, it keeps track of
+the content. If you create 1000000000000 files with the same content, it
+will only create 1 blob. Also works if you create 2 files with the same
+content. :wink:
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org062a0bb" class="outline-3">
+<h3 id="learn-more-about-git">Learn more about Git</h3>
+<div class="outline-text-3" id="text-learn-more-about-git">
+<ul class="org-ul">
+<li><a href="https://github.com/pluralsight/git-internals-pdf">https://github.com/pluralsight/git-internals-pdf</a></li>
+<li><a href="http://rogerdudler.github.io/git-guide/">http://rogerdudler.github.io/git-guide/</a></li>
+<li><a href="https://matthew-brett.github.io/curious-git/index.html">https://matthew-brett.github.io/curious-git/index.html</a></li>
+<li><a href="http://git-school.github.io/visualizing-git/">http://git-school.github.io/visualizing-git/</a></li>
+<li><a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>
+<li><a href="https://git-scm.com/docs">https://git-scm.com/docs</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2023-05-02 Tue 22:26</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.3)</p>
+</div>
+</body>
+</html>
