@@ -124,20 +124,20 @@ LUG Workshop\, Tentative Time
     <item>
       <title>
 
-LUG Workshop\, Origin of the Internet
-
-
-</title>
-      <pubDate>Fri, 03 Dec 2021 22:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>
-
 LUG Workshop
 
 
 </title>
-      <pubDate>Fri, 10 Sep 2021 21:00:00 GMT</pubDate>
+      <pubDate>Fri, 10 Sep 2021 16:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+
+LUG Workshop\, Origin of the Internet
+
+
+</title>
+      <pubDate>Fri, 03 Dec 2021 16:00:00 GMT</pubDate>
     </item>
     <item>
       <title>
@@ -146,7 +146,7 @@ Intro to Linux Security and SSH
 
 
 </title>
-      <pubDate>Fri, 04 Feb 2022 22:00:00 GMT</pubDate>
+      <pubDate>Fri, 04 Feb 2022 16:00:00 GMT</pubDate>
     </item>
     <item>
       <title>
@@ -164,7 +164,7 @@ LUG Officers Meeting
 
 
 </title>
-      <pubDate>Sun, 11 Jul 2021 14:00:00 GMT</pubDate>
+      <pubDate>Sun, 13 Jun 2021 14:00:00 GMT</pubDate>
     </item>
     <item>
       <title>
@@ -173,7 +173,7 @@ LUG Officers Meeting
 
 
 </title>
-      <pubDate>Sun, 13 Jun 2021 14:00:00 GMT</pubDate>
+      <pubDate>Sun, 11 Jul 2021 14:00:00 GMT</pubDate>
     </item>
     <item>
       <title>
@@ -254,7 +254,7 @@ LUG Movie Night
 
 
 </title>
-      <pubDate>Sat, 21 Nov 2020 17:00:00 GMT</pubDate>
+      <pubDate>Thu, 17 Sep 2020 17:00:00 GMT</pubDate>
     </item>
     <item>
       <title>
@@ -272,7 +272,7 @@ LUG Movie Night
 
 
 </title>
-      <pubDate>Thu, 17 Sep 2020 17:00:00 GMT</pubDate>
+      <pubDate>Sat, 21 Nov 2020 17:00:00 GMT</pubDate>
     </item>
     <item>
       <title>
@@ -282,36 +282,6 @@ General Body Meeting
 
 </title>
       <pubDate>Fri, 11 Sep 2020 16:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>
-
-Learn Linux
- Git and SSH
-
-
-</title>
-      <pubDate>Fri, 02 Oct 2020 16:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>
-
-Learn Linux
- Systemctl
-
-
-</title>
-      <pubDate>Fri, 04 Dec 2020 16:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>
-
-Learn Linux
- Building a VM
-
-
-</title>
-      <pubDate>Fri, 04 Dec 2020 16:00:00 GMT</pubDate>
     </item>
     <item>
       <title>
@@ -332,6 +302,36 @@ Learn Linux
 
 </title>
       <pubDate>Fri, 06 Nov 2020 16:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+
+Learn Linux
+ Building a VM
+
+
+</title>
+      <pubDate>Fri, 04 Dec 2020 16:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+
+Learn Linux
+ Systemctl
+
+
+</title>
+      <pubDate>Fri, 04 Dec 2020 16:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+
+Learn Linux
+ Git and SSH
+
+
+</title>
+      <pubDate>Fri, 02 Oct 2020 16:00:00 GMT</pubDate>
     </item>
     <item>
       <title>
