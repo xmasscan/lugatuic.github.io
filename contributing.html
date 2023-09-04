@@ -1,94 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<!-- 2023-09-04 Mon 20:02 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contributing to this website.</title>
-<meta name="generator" content="Org mode" />
-<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Soham S Gumaste" />
+  <title>Contributing to this website.</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="static/main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-<div id="content">
 <h1 class="title">Contributing to this website.</h1>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#orga5c394d">Introduction</a></li>
-<li><a href="#orgf7c71f6">Prerequisites</a></li>
-<li><a href="#org82847bc">Contributing</a></li>
-<li><a href="#org394cef7">Licensing</a></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orga5c394d" class="outline-2">
-<h2 id="orga5c394d">Introduction</h2>
-<div class="outline-text-2" id="text-orga5c394d">
-<p>
-This website uses <code>GNU Emacs</code> and <code>org-mode</code> to manage content.
-Org mode files (.org) are converted to HTML files (.html) by Emacs.
-It is surprisingly easy to contribute to this website.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgf7c71f6" class="outline-2">
-<h2 id="orgf7c71f6">Prerequisites</h2>
-<div class="outline-text-2" id="text-orgf7c71f6">
-<ol class="org-ol">
-<li>Get a text editing environment with support for org mode.
-Options include the obvious GNU Emacs but also
-<code>VS Code</code> with <a href="https://marketplace.visualstudio.com/items?itemName=tootone.org-mode">an extension</a> or <code>Vim</code> by <a href="https://github.com/jceb/vim-orgmode">committing heresy</a>.</li>
-
-<li>Be familiar with <a href="content/git.html">Git</a>.</li>
+<h1 id="introduction">Introduction</h1>
+<p>This website uses <code>GNU Emacs</code> and <code>org-mode</code> to manage content. Org mode files (.org) are converted to HTML files (.html) by Emacs. It is surprisingly easy to contribute to this website.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<ol>
+<li><p>Get a text editing environment with support for org mode. Options include the obvious GNU Emacs but also <code>VS Code</code> with <a href="https://marketplace.visualstudio.com/items?itemName=tootone.org-mode">an extension</a> or <code>Vim</code> by <a href="https://github.com/jceb/vim-orgmode">committing heresy</a>.</p></li>
+<li><p>Be familiar with <a href="content/git.org">Git</a>.</p></li>
 </ol>
-</div>
-</div>
-
-
-
-<div id="outline-container-org82847bc" class="outline-2">
-<h2 id="org82847bc">Contributing</h2>
-<div class="outline-text-2" id="text-org82847bc">
-<ol class="org-ol">
-<li>Clone the <a href="https://github.com/lugatuic/new-new-website">GitHub repo</a>.</li>
-<li>In the <code>content/</code> folder, create a file with a sensible name (in a new branch).</li>
-<li><p>
-Add the following as a header of the file.
-</p>
-<div class="org-src-container">
-<pre class="src src-org">#+TITLE: <span style="font-weight: bold;">&lt;Page Title&gt;</span>
+<h1 id="contributing">Contributing</h1>
+<ol>
+<li><p>Clone the <a href="https://github.com/lugatuic/new-new-website">GitHub repo</a>.</p></li>
+<li><p>In the <code>content/</code> folder, create a file with a sensible name (in a new branch).</p></li>
+<li><p>Add the following as a header of the file.</p>
+<pre class="org" data-exports="code"><code>#+TITLE: &lt;Page Title&gt;
 #+DATE: &lt;YYYY-MM-DD&gt;
 #+AUTHOR: Your Full Name
 #+EMAIL: netid@uic.edu
-</pre>
-</div></li>
-<li>Write out your contribution article in normal <code>org-mode</code> syntax.</li>
-<li>Test changes locally by running <code>./build.sh</code>. The results are in the <code>public/</code> folder.</li>
-<li>Push and create a Pull Request!</li>
+</code></pre></li>
+<li><p>Write out your contribution article in normal <code>org-mode</code> syntax.</p></li>
+<li><p>Test changes locally by running <code>./build.sh</code>. The results are in the <code>public/</code> folder.</p></li>
+<li><p>Push and create a Pull Request!</p></li>
 </ol>
-</div>
-</div>
-
-
-<div id="outline-container-org394cef7" class="outline-2">
-<h2 id="org394cef7">Licensing</h2>
-<div class="outline-text-2" id="text-org394cef7">
-<p>
-By contributing, you agree to release your work under the same license as the entire project.
-This project is licensed <code>MIT</code> and may be changed by the LUG Administration with or without notice.
-</p>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="date">Date: 2023-01-02 Mon 00:00</p>
-<p class="date">Created: 2023-09-04 Mon 20:02</p>
-<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.3)</p>
-</div>
+<h1 id="licensing">Licensing</h1>
+<p>By contributing, you agree to release your work under the same license as the entire project. This project is licensed <code>MIT</code> and may be changed by the LUG Administration with or without notice.</p>
+<p class="date">&lt;2023-01-02 Mon&gt;</p>
 </body>
 </html>
