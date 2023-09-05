@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<?xml-stylesheet type="text/xsl" href="/style.xsl" ?>
+<vcalendar>
+<version>
+<![CDATA[
+2.0
+
+]]>
+</version>
+<prodid>
+<![CDATA[
+CAMPUSGROUPS
+
+]]>
+</prodid>
+<x-wr-calname>
+<![CDATA[
+Linux User Group
+
+]]>
+</x-wr-calname>
+<x-published-ttl>
+<![CDATA[
+PT1H
+
+]]>
+</x-published-ttl>
+</vcalendar>
