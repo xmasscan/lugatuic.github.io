@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Intro to Git</title>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="static/main.css" />
+</head>
+<body>
+<h1 class="title">Intro to Git</h1>
+<h1 id="git-and-github-for-beginners">Git and GitHub for Beginners</h1>
+<p>Git is a powerful tool for managing and collaborating on software projects. It allows you to track changes, create branches, merge code, and more. GitHub is a platform that hosts Git repositories online and provides additional features such as issue tracking, code review, and social networking.</p>
+<p>In this article, I will explain some of the basic concepts and commands of Git and GitHub, and how you can use them to work on your own or with others.</p>
+<h2 id="what-is-a-repository">What is a repository?</h2>
+<p>A repository is a collection of files and folders that are tracked by Git. A repository can be local or remote. A local repository is stored on your computer, while a remote repository is stored on a server, such as GitHub.</p>
+<p>You can create a local repository by using the command <code>git init</code> in an empty folder. This will initialize a hidden folder called <code>.git</code> that contains all the information about your repository.</p>
+<p>You can create a remote repository by using the GitHub website or the command <code>git remote add origin &lt;url&gt;</code>, where <code>&lt;url&gt;</code> is the URL of your GitHub repository. This will link your local repository to the remote one, so you can push and pull changes between them.</p>
+<h2 id="what-are-commits">What are commits?</h2>
+<p>Commits are snapshots of your repository at a certain point in time. They contain the changes that you have made to your files since the last commit. You can create a commit by using the command <code>git commit -m "&lt;message&gt;"</code>, where <code>&lt;message&gt;</code> is a short description of what you have done.</p>
+<p>Commits are identified by a unique hash, such as <code>a1b2c3d4</code>. You can view the history of your commits by using the command <code>git log</code>.</p>
+<h2 id="what-are-branches">What are branches?</h2>
+<p>Branches are parallel versions of your repository that allow you to work on different features or tasks without affecting the main branch, which is usually called <code>master</code>. You can create a branch by using the command <code>git branch &lt;name&gt;</code>, where <code>&lt;name&gt;</code> is the name of your branch.</p>
+<p>You can switch between branches by using the command <code>git checkout &lt;name&gt;</code>. You can view all the branches in your repository by using the command <code>git branch -a</code>.</p>
+<h2 id="what-are-merges">What are merges?</h2>
+<p>Merges are operations that combine the changes from two branches into one. You can merge a branch into another by using the command <code>git merge &lt;name&gt;</code>, where <code>&lt;name&gt;</code> is the name of the branch you want to merge into the current one.</p>
+<p>Sometimes, there may be conflicts when merging two branches, which means that there are incompatible changes in the same file. In that case, you need to resolve the conflicts manually by editing the file and choosing which version to keep. You can mark the conflict as resolved by using the command <code>git add &lt;file&gt;</code>.</p>
+<h2 id="how-to-use-github">How to use GitHub?</h2>
+<p>GitHub is a website that hosts Git repositories online and provides additional features such as issue tracking, code review, and social networking. You can use GitHub to store your code online, collaborate with other developers, and contribute to open source projects.</p>
+<p>To use GitHub, you need to create an account on their website. Then, you can create or fork repositories, clone them to your local machine, push and pull changes, create pull requests, review code, report issues, and more.</p>
+<p>You can also use GitHub Pages to host your static websites for free, GitHub Actions to automate your workflows, GitHub Gist to share snippets of code, and more.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Git and GitHub are powerful tools for managing and collaborating on software projects. They allow you to track changes, create branches, merge code, and more. By learning how to use them, you can improve your coding skills and productivity.</p>
+<p>I hope this article was helpful for you. If you want to learn more about Git and GitHub, you can check out these resources:</p>
+<ul>
+<li><a href="https://git-scm.com/doc">Git Documentation</a></li>
+<li><a href="https://github.com/git-guides">GitHub Guides</a></li>
+<li><a href="https://www.freecodecamp.org/news/git-and-github-for-beginners/">Git and GitHub for Beginners Tutorial</a></li>
+<li><a href="https://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scientists</a></li>
+<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">An Intro to Git and GitHub for Beginners (Tutorial)</a></li>
+</ul>
+</body>
+</html>
