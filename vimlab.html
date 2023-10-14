@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Ethan Wong" />
+  <meta name="dcterms.date" content="2023-10-13" />
+  <title>Vim</title>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="static/main.css" />
+</head>
+<body>
+<h1 class="title">Vim</h1>
+<h1 id="metadata">Metadata</h1>
+<p>Hello! This is the markdown transcript for a presentation held on October 13th. You can view the writeup in PDF format <a href="static/vimlab/vimlab.handout.pdf">here</a>.</p>
+<h2 id="video-recording">Video Recording</h2>
+<p><video src="static/vimlab/LUG_VIMlab_vid.mp4" controls=""><a href="static/vimlab/LUG_VIMlab_vid.mp4">Video</a></video> Note that the first section discussing <em>why Vim?</em> and <em>History</em> were cut due to recording errors. Sorry about that!</p>
+<h1 id="why-vim">Why Vim?</h1>
+<p>Why Vim?</p>
+<ul>
+<li>Simple and ubiquitous text editor</li>
+<li>Usable in a <em>terminal</em></li>
+<li>Keyboard-centric, meaning that a mouse is <span class="underline">optional</span></li>
+<li>Vim’s version of modal input is popular and commonly emulated</li>
+<li>Part of the POSIX standard!</li>
+</ul>
+<h1 id="history">History</h1>
+<ul>
+<li>Vi(no -m) was created by Bill Joy in <strong>1976</strong> for the Second BSD.</li>
+<li>It is the visual mode for the <code>ex</code> command line text editor.</li>
+<li>Vi was created for remote editing over a <em>300</em> baud modem, which transmitted text slower than you can read!</li>
+</ul>
+<figure>
+<img src="static/vimlab/bill_joy.jpg" style="width:50.0%" alt="" /><figcaption>Bill Joy, the creator of <code>vi</code></figcaption>
+</figure>
+<ul>
+<li>Vi iMproved (<code>vim</code>) was created by Bram Moolenaar in 1988 as a <em>clone</em> of <code>vi</code>.</li>
+<li><code>vim</code> is a superset of <code>vi</code>, introducing new features such as syntax highlighting, undo/redo, screen splitting, and plugin support.</li>
+<li>Like <code>vi</code>, <code>vim</code> has also been ported to a wide range of OS’s.</li>
+<li>Today, <code>vim</code> and its derivatives make up one of the most most popular text editor families.</li>
+</ul>
+<h1 id="basic-knowledge">Basic Knowledge</h1>
+<h2 id="goals">Goals</h2>
+<p>We will try to learn:</p>
+<ul>
+<li>How to switch between the different <em>modes</em> of <code>vim</code></li>
+<li>How to navigate around a text document using <strong>modal</strong> keybindings</li>
+<li>Methods for remembering the the mnemonics</li>
+<li>How to select, manipulate, and insert text into files</li>
+<li>How to quit <code>vim</code> without restarting your computer...<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+</ul>
+<h2 id="modes">Modes</h2>
+<p>Modes <code>vim</code> is known for a <strong>modal</strong> editing scheme.</p>
+<p>What is modal editing?</p>
+<p>In <code>vim</code>, various things that you typically do while editing text is split into different <em>modes</em>.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Mode</strong></th>
+<th style="text-align: left;"><strong>Purpose</strong></th>
+<th style="text-align: left;"><strong>How to Enter</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Normal</td>
+<td style="text-align: left;">Move around and manipulate <em>existing</em> text</td>
+<td style="text-align: left;">Default, can return to by pressing in other modes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Insert</td>
+<td style="text-align: left;">Allows you to type text like in any standard editor</td>
+<td style="text-align: left;"><code>i</code>, <code>a</code>, <code>x</code>, <code>c</code>, <code>o</code>, among others in Normal mode</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Visual</td>
+<td style="text-align: left;">Allows you to select regions of text as if you were using a mouse</td>
+<td style="text-align: left;"><code>v</code>, <code>Shift + v</code>, <code>Ctrl + v</code> in Normal mode</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Command</td>
+<td style="text-align: left;">Allows you to execute commands like save and exit</td>
+<td style="text-align: left;"><code>:</code> in Normal mode</td>
+</tr>
+</tbody>
+</table>
+<p>There are other additional modes that <code>vim</code> has out-of-the-box, but these are the basics.</p>
+<p>Why should editing be split into modes?</p>
+<h2 id="keybinds">Keybinds</h2>
+<p>Modes allow for <code>vim</code> perform actions using simple and easy to remember keystroke sequences! These are known as motions!</p>
+<h3 id="example">Example</h3>
+<p>Navigating can be done with <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> in Normal mode. These corrispond to <code>&lt;Left&gt;</code>, <code>&lt;Down&gt;</code>, <code>&lt;Up&gt;</code>, <code>&lt;Right&gt;</code> respectively.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>This allows you to keep your hands on the home-row of your keyboard (especially good if you are a touch-typist)!</p>
+<h3 id="example-2">Example 2</h3>
+<p>Additionally, an arbitrary number can be prefixed to <span class="underline">modify</span> motions.</p>
+<p>One usecase is <code>5 + j</code>, which moves down 5 lines in one input sequence.</p>
+<p>How can you easily remember these keybinds?</p>
+<p>Most keybinds are <strong>mnemonics</strong> for their corrisponding action.</p>
+<ul>
+<li><code>i</code>nsert enters Insert mode</li>
+<li><code>a</code>ppend is the same as insert, but starts inserting at the character after the cursor</li>
+<li><code>x</code>-out deletes a single character</li>
+<li><code>d</code>elete takes your selection and deletes it</li>
+<li><code>c</code>hange deletes your selection and enters Insert mode</li>
+<li>etc.</li>
+</ul>
+<p>There are a billion keybinds in <code>vim</code>, so don’t fret about learning all of them at once. Learning as you go is the method here!</p>
+<p><code>vim</code> motions are extremely powerful. They let you condense the work of selecting text and changing it into easy to remember input sequences!</p>
+<h3 id="example-1">Example 1</h3>
+<p><code>cc</code> lets you delete a line and start retyping text in one shot (<code>c</code>hange a line)! Double pressing most actions will allow you to apply it to the line your cursor is on.</p>
+<p><strong>Before</strong></p>
+<pre><code>                This is a sentence!
+                The cursor is below this line.
+                _Emacs users are stinky :(
+                another wacky line!</code></pre>
+<p><strong>After</strong></p>
+<pre><code>                This is a sentence!
+                The cursor is below this line.
+                |
+                another wacky line!</code></pre>
+<h3 id="example-2-1">Example 2</h3>
+<p>Lets you <code>d</code>elete a <code>w</code>ord.</p>
+<p>The works to specify your selection after <span class="underline">any</span> action! So, this will work with too!</p>
+<p><strong>Before</strong></p>
+<pre><code>                This is a sentence!
+                The cursor is below this line.
+                _Emacs users are stinky :(
+                another wacky line!</code></pre>
+<p><strong>After</strong></p>
+<pre><code>                This is a sentence!
+                The cursor is below this line.
+                _users are stinky :(
+                another wacky line!</code></pre>
+<h3 id="example-3">Example 3</h3>
+<p>Commands can be chained too! <code>2k</code> and <code>dip</code> Lets you move <code>2</code> up (<code>k</code>) and <code>d</code>elete the <code>i</code>nner <code>p</code>aragraph.</p>
+<p><strong>Before</strong></p>
+<pre><code>                This is a sentence!
+                The cursor is below this line.
+                _Emacs users are stinky :(
+                another wacky line!</code></pre>
+<p><strong>After</strong></p>
+<pre><code>                _</code></pre>
+<p>Other useful actions include (but not all)...</p>
+<ul>
+<li><code>o</code> and <code>O</code> which creates a new line below/above the current line respectively</li>
+<li><code>gg</code> and <code>G</code> which puts the cursor at the top/bottom of the file</li>
+<li><code>zz</code> which centers the editing window</li>
+<li><code>b</code> and <code>e</code> goes to the <code>b</code>eginning and <code>e</code>nd of the word your cursor is currently on.</li>
+<li><code>y</code> to copy (<code>d</code> cuts) and <code>p</code> to paste</li>
+<li><code>u</code> and <code>Ctrl + r</code> to undo and redo.</li>
+<li><code>&lt;&lt;</code> and <code>&gt;&gt;</code> to change indentation levels in code.</li>
+</ul>
+<h2 id="commands">Commands</h2>
+<p>There are lots of commands in <code>vim</code>, just like actions, but we’ll just go over a few. To enter Command mode, just prepend a <code>:</code> before typing it!</p>
+<ul>
+<li><code>:write</code> or <code>:w</code> saves your file<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+<li><code>:quit</code> or <code>:q</code> quits Vim<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+<li><code>:%s/&lt;regex&gt;/&lt;regex&gt;/gc</code> lets you find and replace</li>
+<li><code>:help &lt;command&gt;</code> brings up the help-page for any Vim command</li>
+</ul>
+<p>You can also chain commands, so <code>:wq</code> for example saves your file and exits in one shot.<br />
+Also, <code>/</code> and <code>?</code> let you search within your document.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> <code>n</code> and <code>N</code> let you go backwards/forwards through your search results.</p>
+<h1 id="crash-course">Crash Course</h1>
+<p>Lets try a hands-on demo!</p>
+<p>Firstly, open a terminal!</p>
+<ul>
+<li><p>Windows<br />
+Open one of the following:</p>
+<ul>
+<li>Powershell</li>
+<li>PuTTy</li>
+</ul>
+<p>You’ll need to <code>ssh</code> into <code>malware.cs.uic.edu</code>.<br />
+Syntax: <code>ssh userXX@malware.cs.uic.edu</code>, where <span class="math inline"><em>X</em><em>X</em></span> is a number between 1-25.</p></li>
+<li><p>MacOS<br />
+Simply go to <code>Applications &gt; Utilities &gt; Terminal</code> and type <code>vim</code>, its included by default!</p></li>
+<li><p>Linux<br />
+Open your terminal of choice, install <code>vim</code> if you need to (tho it should be included by default...), and run <code>vim</code>.</p></li>
+</ul>
+<p><strong>Challenge!</strong><br />
+I want you to create a simple C program using <code>vim</code> and sucessfully compile it! It can be as simple as "Hello, World!" if you’d like!</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>        <span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>        <span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> **argv) {</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>            printf(<span class="st">&quot;Hello World!</span><span class="sc">\n</span><span class="st">&quot;</span>);</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>        }</span></code></pre></div>
+<p>If thats too easy for you, try these extra challenges:</p>
+<ul>
+<li>Don’t use the arrow keys at all</li>
+<li>Write your program in Rust instead</li>
+<li>Do not leave <code>vim</code> at any point when writing the program</li>
+</ul>
+<p><strong>Closing Remarks</strong></p>
+<ul>
+<li>This was a very surface-level introduction to <code>vim</code>.<br />
+Some features not covered include:
+<ul>
+<li>Vim Modelines</li>
+<li>Multiplexing buffers</li>
+<li>Macros</li>
+<li>Plugins</li>
+</ul></li>
+<li>Don’t fret if this is alot of information at once! It’s important to start small and <span class="underline">learn what you need as you go</span>.</li>
+<li>If you want to practice more with <code>vim</code>, try out <code>vimtutor</code> which is a guided tutorial to learn Vim.</li>
+<li>Don’t be afraid to reference a cheatsheet like <a href="https://vim.rtorr.com/" class="uri">https://vim.rtorr.com/</a> when learning!</li>
+<li>As always, practice makes perfect.</li>
+</ul>
+<p><strong>Me :3</strong></p>
+<figure>
+<img src="static/vimlab/epixtm.png" style="width:60.0%" alt="" /><figcaption>image</figcaption>
+</figure>
+<p>The information in this presentation will be made available on our website!<br />
+<a href="https://lug.cs.uic.edu" class="uri">https://lug.cs.uic.edu</a></p>
+<p>Join our Discord!</p>
+<figure>
+<img src="static/vimlab/lug-discord.svg" style="width:50.0%" alt="" /><figcaption><a href="https://discord.gg/NgxTR7PX5e" class="uri">https://discord.gg/NgxTR7PX5e</a></figcaption>
+</figure>
+<!-- vim: set tw=80: -->
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>a.k.a. commands<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>People consider using the arrow keys in <code>vim</code> a cardinal sin.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>you can specify a filename afterwards to emulate<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>add an <code>!</code> to quit and ignore unsaved changes<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>use <code>:noh</code> to clear highlighted results after<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<p class="date">October 13, 2023</p>
+</body>
+</html>
