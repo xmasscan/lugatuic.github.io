@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Soham S Gumaste" />
+  <title>Contributing to this website.</title>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="static/main.css" />
+</head>
+<body>
+<h1 class="title">Contributing to this website.</h1>
+<h1 id="introduction">Introduction</h1>
+<p>This website uses <code>GNU Emacs</code> and <code>org-mode</code> to manage content. Org mode files (.org) are converted to HTML files (.html) by Emacs. It is surprisingly easy to contribute to this website.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<ol>
+<li><p>Get a text editing environment with support for org mode. Options include the obvious GNU Emacs but also <code>VS Code</code> with <a href="https://marketplace.visualstudio.com/items?itemName=tootone.org-mode">an extension</a> or <code>Vim</code> by <a href="https://github.com/jceb/vim-orgmode">committing heresy</a>.</p></li>
+<li><p>Be familiar with <a href="content/git.org">Git</a>.</p></li>
+</ol>
+<h1 id="contributing">Contributing</h1>
+<ol>
+<li><p>Clone the <a href="https://github.com/lugatuic/new-new-website">GitHub repo</a>.</p></li>
+<li><p>In the <code>content/</code> folder, create a file with a sensible name (in a new branch).</p></li>
+<li><p>Add the following as a header of the file.</p>
+<pre class="org" data-exports="code"><code>#+TITLE: &lt;Page Title&gt;
+#+DATE: &lt;YYYY-MM-DD&gt;
+#+AUTHOR: Your Full Name
+#+EMAIL: netid@uic.edu
+</code></pre></li>
+<li><p>Write out your contribution article in normal <code>org-mode</code> syntax.</p></li>
+<li><p>Test changes locally by running <code>./build.sh</code>. The results are in the <code>public/</code> folder.</p></li>
+<li><p>Push and create a Pull Request!</p></li>
+</ol>
+<h1 id="licensing">Licensing</h1>
+<p>By contributing, you agree to release your work under the same license as the entire project. This project is licensed <code>MIT</code> and may be changed by the LUG Administration with or without notice.</p>
+<p class="date">&lt;2023-01-02 Mon&gt;</p>
+</body>
+</html>
