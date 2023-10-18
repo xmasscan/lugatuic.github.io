@@ -28,7 +28,7 @@ PT1H
 <vevent>
 <dtstamp>
 <![CDATA[
-20231018T130849
+20231018T144731
 
 ]]>
 </dtstamp>
@@ -133,7 +133,7 @@ Tired of Microsoft's wanting to know more about you than you?. . Sick of playing
 <vevent>
 <dtstamp>
 <![CDATA[
-20231018T130849
+20231018T144731
 
 ]]>
 </dtstamp>
@@ -238,7 +238,7 @@ Tired of Microsoft's wanting to know more about you than you?. . Sick of playing
 <vevent>
 <dtstamp>
 <![CDATA[
-20231018T130849
+20231018T144731
 
 ]]>
 </dtstamp>
@@ -343,7 +343,7 @@ Tired of Microsoft's wanting to know more about you than you?. . Sick of playing
 <vevent>
 <dtstamp>
 <![CDATA[
-20231018T130849
+20231018T144731
 
 ]]>
 </dtstamp>
@@ -448,7 +448,7 @@ Tired of Microsoft's wanting to know more about you than you?. . Sick of playing
 <vevent>
 <dtstamp>
 <![CDATA[
-20231018T130849
+20231018T144731
 
 ]]>
 </dtstamp>
@@ -546,6 +546,111 @@ https
 Tired of Microsoft's wanting to know more about you than you?. . Sick of playing in the Apple Garden?. . Want to take back ownership of your machine?. . Come to the Linux Boot Camp!. . In 5 days, you'll go from a Linux scrub to a Linux user in no time flat.. . Monday-Friday from 6-7PM. . At SELE 2254\n---\nEvent Details
  https
 //uic.campusgroups.com/rsvp?id=2177075
+
+]]>
+</description>
+</vevent>
+<vevent>
+<dtstamp>
+<![CDATA[
+20231018T145844
+
+]]>
+</dtstamp>
+<last-modified>
+<![CDATA[
+20231018T145807
+
+]]>
+</last-modified>
+<created>
+<![CDATA[
+20231009T120000
+
+]]>
+</created>
+<sequence>
+<![CDATA[
+2
+
+]]>
+</sequence>
+<organizer cn="'linux user group'" >
+<![CDATA[
+https
+//uic.campusgroups.com/linuxuser/
+
+]]>
+</organizer>
+<contact>
+<![CDATA[
+https
+//uic.campusgroups.com/linuxuser/rsvp_boot?id=2240938#event_host
+
+]]>
+</contact>
+<categories x-cg-category="club_acronym" >
+<![CDATA[
+LINUXUSER
+
+]]>
+</categories>
+<categories x-cg-category="event_type" >
+<![CDATA[
+Workshop
+
+]]>
+</categories>
+<categories x-cg-category="event_tags" >
+<![CDATA[
+ComputerScience,Engineering,LUG
+
+]]>
+</categories>
+<dtstart>
+<![CDATA[
+20231027T230000Z
+
+]]>
+</dtstart>
+<dtend>
+<![CDATA[
+20231028T000000Z
+
+]]>
+</dtend>
+<uid>
+<![CDATA[
+ab9a5c2b142383672e82dcdb6c5b480e1092023_11
+06
+02_AM@campusgroups.com
+
+]]>
+</uid>
+<summary encoding="quoted-printable" >
+<![CDATA[
+Pull Request Lab
+
+]]>
+</summary>
+<location>
+<![CDATA[
+ Sign in to download the location
+
+]]>
+</location>
+<url>
+<![CDATA[
+https
+//uic.campusgroups.com/rsvp?id=2240938
+
+]]>
+</url>
+<description>
+<![CDATA[
+Ever wanted to contribute to a project but don't know where to start?. . Ever wondered why your submissions keep getting rejected?. . Don't worry.  This lab will fix that.  Go from 0 - 100 Pull Request specialist in an hour.\n---\nEvent Details
+ https
+//uic.campusgroups.com/rsvp?id=2240938
 
 ]]>
 </description>
