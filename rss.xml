@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>LUG Events</title>
+    <link>https://lug.cs.uic.edu/events.xml</link>
+    <description>Upcoming LUG events as an RSS feed, calendar-synced!</description>
+    <item>
+      <title>
+
+Pull Request Lab
+
+
+</title>
+      <pubDate>Fri, 27 Oct 2023 23:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+
+Linux Boot Camp - Day 2
+
+
+</title>
+      <pubDate>Tue, 12 Sep 2023 23:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+
+Linux Boot Camp - Day 3
+
+
+</title>
+      <pubDate>Wed, 13 Sep 2023 23:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+
+Linux Boot Camp - Day 4
+
+
+</title>
+      <pubDate>Thu, 14 Sep 2023 23:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+
+Linux Boot Camp - Day 5
+
+
+</title>
+      <pubDate>Fri, 15 Sep 2023 23:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+
+Linux Boot Camp - Day 1
+
+
+</title>
+      <pubDate>Mon, 11 Sep 2023 22:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
