@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Makefiles</title>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="static/main.css" />
+</head>
+<body>
+<h1 class="title">Makefiles</h1>
+<h1 id="work-in-progress">Work In Progress</h1>
+<p>This article is work in progress! Check back soon for a full writeup.</p>
+<h1 id="52d36d9c-0f59-4a94-a29e-769a6d7cf1ec" id="makefile-tier-stupid">Makefile Tier: Stupid</h1>
+<div class="sourceCode" id="cb1" data-tangle="build/makefile1"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dv">main:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>  rm -rf main</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  gcc file1.c file2.c -o <span class="ch">$@</span></span></code></pre></div>
+<h1 id="makefile-tier-novice">Makefile Tier: Novice</h1>
+<div class="sourceCode" id="cb2" data-tangle="build/makefile2"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="dv">main:</span><span class="dt"> file1.c file2.c</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>  gcc file1.c file2.c -o <span class="ch">$@</span></span></code></pre></div>
+<h1 id="makefile-tier-beginner">Makefile Tier Beginner</h1>
+<div class="sourceCode" id="cb3" data-tangle="build/makefile3"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="dv">file1.o:</span><span class="dt"> file1.c</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>  gcc -c file1.c</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="dv">file2.o:</span><span class="dt"> file1.c</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>  gcc -c file2.c</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="dv">main:</span><span class="dt"> file1.o file2.o</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>  gcc file1.o file2.o -o <span class="ch">$@</span></span></code></pre></div>
+<h1 id="makefile-tier-intermediate">Makefile Tier Intermediate</h1>
+<div class="sourceCode" id="cb4" data-tangle="build/makefile4"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="dt">OBJS</span><span class="ch">=</span><span class="st">file1.o file2.o</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="dv">%.o:</span><span class="dt"> %.c</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>  gcc -c <span class="ch">$^</span> -o <span class="ch">$@</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>  <span class="ch">${</span><span class="kw">info</span><span class="st"> compiled </span><span class="ch">$^</span><span class="st">!!</span><span class="ch">}</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a><span class="dv">main:</span><span class="dt"> </span><span class="ch">$(</span><span class="dt">OBJS</span><span class="ch">)</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>  gcc -fsanitize=address -fno-strict-aliasing -fno-stack-protector -fpie <span class="ch">$^</span> -o <span class="ch">$@</span></span></code></pre></div>
+<h1 id="makefile-tier-pro">Makefile Tier Pro</h1>
+<div class="sourceCode" id="cb5" data-tangle="build/makefile5"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="dt">CC</span><span class="ch">=</span><span class="st">gcc</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="dt">CFLAGS=-fsanitize</span><span class="ch">=</span><span class="st">address -fno-strict-aliasing -fno-stack-protector -fpie </span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a><span class="dt">OBJS</span><span class="ch">=</span><span class="st">file1.o file2.o</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a><span class="dv">main:</span><span class="dt"> </span><span class="ch">$(</span><span class="dt">OBJS</span><span class="ch">)</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>  <span class="ch">$(</span><span class="dt">CC</span><span class="ch">)</span> <span class="ch">$(</span><span class="dt">CFLAGS</span><span class="ch">)</span> <span class="ch">$^</span> -o <span class="ch">$@</span></span></code></pre></div>
+<h1 id="makefile-tier-legend">Makefile Tier Legend</h1>
+<div class="sourceCode" id="cb6" data-tangle="build/makefile5"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="dt">CC</span><span class="ch">=</span><span class="st">gcc</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="dt">CFLAGS=-fsanitize</span><span class="ch">=</span><span class="st">address -fno-strict-aliasing -fno-stack-protector -fpie </span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a><span class="dt">OBJS</span><span class="ch">=</span><span class="st">file1.o file2.o</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a><span class="dv">depend:</span><span class="dt"> .depend</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>  gcc -MM *.c &gt; .depend</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a><span class="kw">include</span> .depend</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a><span class="dv">main:</span><span class="dt"> </span><span class="ch">$(</span><span class="dt">OBJS</span><span class="ch">)</span><span class="dt"> depend</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a>  <span class="ch">$(</span><span class="dt">CC</span><span class="ch">)</span> <span class="ch">$(</span><span class="dt">CFLAGS</span><span class="ch">)</span> <span class="ch">$^</span> <span class="ch">$(</span><span class="dt">LDFLAGS</span><span class="ch">)</span> -o <span class="ch">$@</span></span></code></pre></div>
+<h1 id="tangent-non-c-makefiles">Tangent: Non C Makefiles</h1>
+<h2 id="latex">LaTeX</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="dv">%.pdf:</span><span class="dt"> %.tex</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>  pdflatex <span class="ch">$^</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a><span class="dv">clean:</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>  rm -rf *.log *.aux</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a><span class="ot">.PHONY</span> <span class="er">clean</span></span></code></pre></div>
+<h2 id="other">Other</h2>
+<p>Basically anytime you want to run command(s) when some <code>input files</code> are <strong>NEWER</strong> than some <code>output files</code>.</p>
+<h1 id="makefile-tier-brain-damage">Makefile Tier BRAIN DAMAGE</h1>
+<ul>
+<li><p><code>${info &lt;stuff&gt;}</code> Useful for logging</p></li>
+<li><p><code>${wildcard *.c}</code> Useful for finding files</p></li>
+<li><p><code>${shell &lt;shell cmd&gt;}</code> Run arbitrary shell commands!</p></li>
+<li><p><code>${foreach i, LIST, &lt;cmd&gt;}</code> : Do cmd for each i in LIST</p>
+<ul>
+<li>Can also return values!</li>
+</ul></li>
+<li><p>Phony Targets: Targets that dont produce the file of their name!</p>
+<ul>
+<li>Useful to run every time.</li>
+</ul></li>
+</ul>
+<h2 id="brain-damage-begins-here">Brain damage begins here</h2>
+<p><a href="Https://github.com/lugatuic/lugatuic.github.io">See LUG Website!</a></p>
+<h1 id="utils">Utils</h1>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="fu">touch</span> *.c</span></code></pre></div>
+<div class="sourceCode" id="cb9" data-org-language="emacs-lisp"><pre class="sourceCode commonlisp"><code class="sourceCode commonlisp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a>(org-babel-result-hide-all)</span></code></pre></div>
+</body>
+</html>
