@@ -28,112 +28,7 @@ PT1H
 <vevent>
 <dtstamp>
 <![CDATA[
-20231210T170148
-
-]]>
-</dtstamp>
-<last-modified>
-<![CDATA[
-20230905T144335
-
-]]>
-</last-modified>
-<created>
-<![CDATA[
-20230827T120000
-
-]]>
-</created>
-<sequence>
-<![CDATA[
-5
-
-]]>
-</sequence>
-<organizer cn="'linux user group'" >
-<![CDATA[
-https
-//uic.campusgroups.com/linuxuser/
-
-]]>
-</organizer>
-<contact>
-<![CDATA[
-https
-//uic.campusgroups.com/linuxuser/rsvp_boot?id=2172081#event_host
-
-]]>
-</contact>
-<categories x-cg-category="club_acronym" >
-<![CDATA[
-LINUXUSER
-
-]]>
-</categories>
-<categories x-cg-category="event_type" >
-<![CDATA[
-Workshop
-
-]]>
-</categories>
-<categories x-cg-category="event_tags" >
-<![CDATA[
-ComputerScience,Academics,networking
-
-]]>
-</categories>
-<dtstart>
-<![CDATA[
-20230911T220000Z
-
-]]>
-</dtstart>
-<dtend>
-<![CDATA[
-20230912T000000Z
-
-]]>
-</dtend>
-<uid>
-<![CDATA[
-ca0f9ed77731ae8acc187035390a84c88272023_12
-55
-01_PM@campusgroups.com
-
-]]>
-</uid>
-<summary encoding="quoted-printable" >
-<![CDATA[
-Linux Boot Camp - Day 1
-
-]]>
-</summary>
-<location>
-<![CDATA[
- Sign in to download the location
-
-]]>
-</location>
-<url>
-<![CDATA[
-https
-//uic.campusgroups.com/rsvp?id=2172081
-
-]]>
-</url>
-<description>
-<![CDATA[
-Tired of Microsoft's wanting to know more about you than you?. . Sick of playing in the Apple Garden?. . Want to take back ownership of your machine?. . Come to the Linux Boot Camp!. . In 5 days, you'll go from a Linux scrub to a Linux user in no time flat.. . Monday-Friday from 6-7PM. . At SELE 2254\n---\nEvent Details
- https
-//uic.campusgroups.com/rsvp?id=2172081
-
-]]>
-</description>
-</vevent>
-<vevent>
-<dtstamp>
-<![CDATA[
-20231210T170148
+20231210T180212
 
 ]]>
 </dtstamp>
@@ -238,7 +133,7 @@ Tired of Microsoft's wanting to know more about you than you?. . Sick of playing
 <vevent>
 <dtstamp>
 <![CDATA[
-20231210T170148
+20231210T180212
 
 ]]>
 </dtstamp>
@@ -343,7 +238,7 @@ Tired of Microsoft's wanting to know more about you than you?. . Sick of playing
 <vevent>
 <dtstamp>
 <![CDATA[
-20231210T170148
+20231210T180212
 
 ]]>
 </dtstamp>
@@ -448,7 +343,7 @@ Tired of Microsoft's wanting to know more about you than you?. . Sick of playing
 <vevent>
 <dtstamp>
 <![CDATA[
-20231210T170148
+20231210T180212
 
 ]]>
 </dtstamp>
@@ -553,7 +448,7 @@ Tired of Microsoft's wanting to know more about you than you?. . Sick of playing
 <vevent>
 <dtstamp>
 <![CDATA[
-20231210T170148
+20231210T180212
 
 ]]>
 </dtstamp>
