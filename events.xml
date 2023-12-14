@@ -28,112 +28,7 @@ PT1H
 <vevent>
 <dtstamp>
 <![CDATA[
-20231213T170231
-
-]]>
-</dtstamp>
-<last-modified>
-<![CDATA[
-20230905T144341
-
-]]>
-</last-modified>
-<created>
-<![CDATA[
-20230829T120000
-
-]]>
-</created>
-<sequence>
-<![CDATA[
-4
-
-]]>
-</sequence>
-<organizer cn="'linux user group'" >
-<![CDATA[
-https
-//uic.campusgroups.com/linuxuser/
-
-]]>
-</organizer>
-<contact>
-<![CDATA[
-https
-//uic.campusgroups.com/linuxuser/rsvp_boot?id=2177074#event_host
-
-]]>
-</contact>
-<categories x-cg-category="club_acronym" >
-<![CDATA[
-LINUXUSER
-
-]]>
-</categories>
-<categories x-cg-category="event_type" >
-<![CDATA[
-Workshop
-
-]]>
-</categories>
-<categories x-cg-category="event_tags" >
-<![CDATA[
-ComputerScience,Academics,networking
-
-]]>
-</categories>
-<dtstart>
-<![CDATA[
-20230914T230000Z
-
-]]>
-</dtstart>
-<dtend>
-<![CDATA[
-20230915T000000Z
-
-]]>
-</dtend>
-<uid>
-<![CDATA[
-b840702518f75f1e94a5dc77ce8945868292023_2
-19
-25_PM@campusgroups.com
-
-]]>
-</uid>
-<summary encoding="quoted-printable" >
-<![CDATA[
-Linux Boot Camp - Day 4
-
-]]>
-</summary>
-<location>
-<![CDATA[
- Sign in to download the location
-
-]]>
-</location>
-<url>
-<![CDATA[
-https
-//uic.campusgroups.com/rsvp?id=2177074
-
-]]>
-</url>
-<description>
-<![CDATA[
-Tired of Microsoft's wanting to know more about you than you?. . Sick of playing in the Apple Garden?. . Want to take back ownership of your machine?. . Come to the Linux Boot Camp!. . In 5 days, you'll go from a Linux scrub to a Linux user in no time flat.. . Monday-Friday from 6-7PM. . At SELE 2254\n---\nEvent Details
- https
-//uic.campusgroups.com/rsvp?id=2177074
-
-]]>
-</description>
-</vevent>
-<vevent>
-<dtstamp>
-<![CDATA[
-20231213T170231
+20231213T192719
 
 ]]>
 </dtstamp>
@@ -238,7 +133,7 @@ Tired of Microsoft's wanting to know more about you than you?. . Sick of playing
 <vevent>
 <dtstamp>
 <![CDATA[
-20231213T170231
+20231213T192742
 
 ]]>
 </dtstamp>
