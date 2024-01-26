@@ -4,14 +4,5 @@
     <title>LUG Events</title>
     <link>https://lug.cs.uic.edu/events.xml</link>
     <description>Upcoming LUG events as an RSS feed, calendar-synced!</description>
-    <item>
-      <title>
-
-Pull Request Lab
-
-
-</title>
-      <pubDate>Fri, 27 Oct 2023 23:00:00 GMT</pubDate>
-    </item>
   </channel>
 </rss>
